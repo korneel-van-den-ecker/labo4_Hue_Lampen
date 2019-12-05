@@ -1,6 +1,6 @@
 export class Lamp {
   id: number;
-  status: boolean;
+  on: boolean;
   kleur: string;
   sterkte: number;
 }

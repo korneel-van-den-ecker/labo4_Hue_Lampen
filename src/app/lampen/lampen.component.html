@@ -1,1 +1,9 @@
-<p>lampen works!</p>
+<h2>Hue Lampen</h2>
+<ul class="lampen">
+  <li *ngFor="let lamp of lampen">
+    <span >Kleur: {{lamp.kleur}} Sterkte: {{lamp.sterkte}} </span>
+  </li>
+</ul>
+<!-- <button class="button" (click)="update()">
+  Save
+</button> -->

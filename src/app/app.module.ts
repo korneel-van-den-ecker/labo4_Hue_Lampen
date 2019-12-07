@@ -5,13 +5,13 @@ import { AppComponent } from './app.component';
 import { LampenComponent } from './lampen/lampen.component';
 // import { AppRoutingModule } from './app-routing.module';
 import {  HttpClientModule } from '@angular/common/http';
-import { ConfigComponent } from './config/config.component';
+// import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LampenComponent,
-    ConfigComponent
+    LampenComponent
+    // ConfigComponent
   ],
   imports: [
     BrowserModule,

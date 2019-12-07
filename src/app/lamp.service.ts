@@ -9,10 +9,11 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LampService {
-  private hueUrl = `http://10.198.112.9/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
+  private hueUrl = `http://10.194.112.8/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    // headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'})
+    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   };
   constructor(
     private http: HttpClient ) { }
@@ -25,7 +26,7 @@ export class LampService {
     return this.http.get(this.hueUrl);
   }
 
- /*  private handleError<T>(operation = 'operation' , result?: T) {
+  /* private handleError<T>(operation = 'operation' , result?: T) {
     return(error: any): Observable<T> => {
       console.error(error);
       // this.log(`${operation} failed= ${error.message}`);

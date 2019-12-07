@@ -9,7 +9,8 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LampService {
-  private hueUrl = `http://10.194.112.8/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
+  // private hueUrl = `http://10.194.112.8/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
+  private hueUrl = `http://localhost:3000/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
 
   httpOptions = {
     // headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'})

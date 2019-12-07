@@ -25,12 +25,9 @@ export class LampenComponent implements OnInit {
 
   construeerLampen(data: object) {
     console.log(data);
-    for (let i = 1; i <=  Object.keys(data).length + 1; i++) {
+    for (let i = 1; i <=  Object.keys(data).length; i++) {
        const lampje: Lamp = {id : i, on : data[i].state.on, xy : data[i].state.xy, sterkte : data[i].state.bri};
        this.lampen.push(lampje);
-
-      // const lampje: Lamp = {id : lamp.state.id, xy : lamp.state.xy, on : lamp.state.on, sterkte: lamp.state.bri};
-      // this.lampen.push(lampje);
     }
   }
 

@@ -1,9 +1,26 @@
 <h2>Hue Lampen</h2>
 <ul class="lampen">
-  <li *ngFor="let lamp of lampen">
+  <li *ngFor="let lamp of lampen"
+  (click)="onSelect(lamp)">
     <span >Kleur: {{lamp.xy}} Sterkte: {{lamp.sterkte}} </span>
   </li>
 </ul>
+ <app-lamp-detail [lamp]="geselecteerdeLamp"></app-lamp-detail>
+
 <!-- <button class="button" (click)="update()">
   Save
 </button> -->
+
+<<!-- div *ngIf="geselecteerdeLamp">
+
+  <h2>Lamp: {{geselecteerdeLamp.id }} Details</h2>
+  <div><span>id: </span>{{geselecteerdeLamp.id}}</div>
+  <div>
+    <label>kleur:
+      <input [(ngModel)]="geselecteerdeLamp.xy" placeholder="kleur"/>
+      <input type="color" [(ngModel)]="geselecteerdeLamp.xy" />
+    </label>
+  </div>
+
+</div>
+ -->

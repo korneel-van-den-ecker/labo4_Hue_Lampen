@@ -10,7 +10,7 @@ import { LampService } from '../lamp.service';
 })
 export class LampenComponent implements OnInit {
   lampen: Lamp[] = [];
-  config: any;
+  geselecteerdeLamp: Lamp;
 
   constructor(private lampService: LampService) {
    }
@@ -30,5 +30,10 @@ export class LampenComponent implements OnInit {
        this.lampen.push(lampje);
     }
   }
+
+  onSelect(lamp: Lamp): void {
+    this.geselecteerdeLamp = lamp;
+  }
+
 
 }

@@ -27,6 +27,14 @@ export class LampService {
     return this.http.get(this.hueUrl);
   }
 
+  getLamp(id: number) {
+    return this.http.get(`${this.hueUrl}/${id}`);
+  }
+
+  putLamp(lamp: Lamp) {
+    return this.http.put(`${this.hueUrl}/${lamp.id}/state`, lamp, this.httpOptions);
+  }
+
   /* private handleError<T>(operation = 'operation' , result?: T) {
     return(error: any): Observable<T> => {
       console.error(error);

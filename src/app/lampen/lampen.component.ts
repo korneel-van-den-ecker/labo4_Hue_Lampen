@@ -35,5 +35,8 @@ export class LampenComponent implements OnInit {
     this.geselecteerdeLamp = lamp;
   }
 
+  update(): void {
+    this.lampService.putLamp(this.geselecteerdeLamp);
+  }
 
 }

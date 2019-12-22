@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Lamp } from './lamp';
-import { LAMPEN } from './mock-lampen';
+// import { LAMPEN } from './mock-lampen';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -9,8 +9,12 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LampService {
+  // School bridge
   // private hueUrl = `http://10.194.112.8/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
-  private hueUrl = `http://localhost:3000/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
+  // Hue bridge sim
+   private hueUrl = `http://localhost:3000/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
+  // Naert Bridge
+  //private hueUrl = `http://178.118.245.113/api/d8cHvqBsSW9iVf6lLMlisoJj96RfV7VybBRwmD42/lights`;
 
   httpOptions = {
     // headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'})

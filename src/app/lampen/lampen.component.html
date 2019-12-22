@@ -5,13 +5,13 @@
     <span >Kleur: {{lamp.xy}} Sterkte: {{lamp.sterkte}} </span>
   </li>
 </ul>
- <app-lamp-detail [lamp]="geselecteerdeLamp"></app-lamp-detail>
+  <app-lamp-detail [rgbLamp]="geselecteerdeLamp"></app-lamp-detail>
 
-<!-- <button class="button" (click)="update()">
+ <button class="button" (click)="update()">
   Save
-</button> -->
+</button>
 
-<<!-- div *ngIf="geselecteerdeLamp">
+<!-- div *ngIf="geselecteerdeLamp">
 
   <h2>Lamp: {{geselecteerdeLamp.id }} Details</h2>
   <div><span>id: </span>{{geselecteerdeLamp.id}}</div>

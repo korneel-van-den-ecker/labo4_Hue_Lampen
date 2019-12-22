@@ -1,15 +1,10 @@
-<div *ngIf="lamp">
-
-  <div *ngIf="">
-
-    <h2>Lamp: {{lamp.id }} Details</h2>
-    <div><span>id: </span>{{lamp.id}}</div>
+<div *ngIf="rgbLamp">
+    <h2>Lamp: {{rgbLamp.id }} Details</h2>
+    <div><span>id: </span>{{rgbLamp.id}}</div>
     <div>
       <label>kleur:
-        <input [(ngModel)]="lamp.xy" placeholder="kleur"/>
-        <input type="color" [(ngModel)]="lamp.xy" />
+        <input [ngModel]="rgbLamp.rgb" />
+        <input  type="color" [(ngModel)]="rgbLamp.rgb" [(ngModel)]="rgbLamp.xy" />
       </label>
     </div>
-  </div>
-
 </div>

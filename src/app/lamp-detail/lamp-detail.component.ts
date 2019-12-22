@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Lamp } from '../lamp';
 import { LampService } from '../lamp.service';
 
@@ -9,7 +9,7 @@ import { LampService } from '../lamp.service';
 })
 
 export class LampDetailComponent implements OnInit {
-  @Input() lamp: Lamp;
+  @Input()@Output() lamp: Lamp;
 
   constructor(
     private lampenService: LampService

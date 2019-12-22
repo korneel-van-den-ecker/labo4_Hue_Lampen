@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Lamp } from '../lamp';
+import { Lamp, KleurMethoden} from '../lamp';
 import { LampService } from '../lamp.service';
 // import { LAMPEN } from '../mock-lampen';
 

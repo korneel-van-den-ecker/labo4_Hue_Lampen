@@ -45,7 +45,7 @@ export class LampService {
       );
     } else {
       return this.http.put(`${this.hueUrl}/${lamp.id}/state`, {on: lamp.on, bri: lamp.sterkte, xy: lamp.xy}, this.httpOptions).subscribe(
-        (res) => console.log(res)
+        (res) => console.log(res) // Het antwoord na de put kan vanuit hier eventueel geëvalueerd worden
       );
     }
   }

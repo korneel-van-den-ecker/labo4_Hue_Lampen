@@ -2,10 +2,11 @@
 <ul class="lampen">
   <li *ngFor="let lamp of lampen"
   (click)="onSelect(lamp)">
-    <span >Kleur: {{lamp.xy}} Sterkte: {{lamp.sterkte}} </span>
+    <span >Kleur: x: {{lamp.xy[0]}} y: {{lamp.xy[1]}} Sterkte: {{lamp.sterkte}} </span>
   </li>
 </ul>
-  <app-lamp-detail [lamp]="geselecteerdeLamp"></app-lamp-detail>
+  <app-lamp-detail [(lamp)]="geselecteerdeLamp"></app-lamp-detail>
+
 
  <button class="button" (click)="update()">
   Verstuur naar Bridge

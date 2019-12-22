@@ -3,9 +3,14 @@ export class Lamp {
   on: boolean;
   xy: number [];
   sterkte: number;
+  kleurRGB: string;
 }
 
-export class RGBLamp extends Lamp {
+export class GRBLamp extends Lamp {
+
+}
+
+/* export class RGBLamp extends Lamp {
 
   private _rgb: string;
 
@@ -49,3 +54,4 @@ export class RGBLamp extends Lamp {
   }
 
 }
+ */

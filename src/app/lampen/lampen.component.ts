@@ -26,7 +26,7 @@ export class LampenComponent implements OnInit {
   construeerLampen(data: object) {
     console.log(data);
     for (let i = 1; i <=  Object.keys(data).length; i++) {
-       const lampje: Lamp = {id : i, on : data[i].state.on, xy : data[i].state.xy, sterkte : data[i].state.bri};
+       const lampje: Lamp = {id : i, on : data[i].state.on, xy : data[i].state.xy, sterkte : data[i].state.bri, kleurRGB : '#ffffff'};
        this.lampen.push(lampje);
     }
   }
@@ -35,7 +35,7 @@ export class LampenComponent implements OnInit {
     this.geselecteerdeLamp = lamp;
   }
 
-  update(): void {
+  update() {
     this.lampService.putLamp(this.geselecteerdeLamp);
   }
 

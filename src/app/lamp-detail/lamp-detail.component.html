@@ -1,10 +1,19 @@
-<div *ngIf="rgbLamp">
-    <h2>Lamp: {{rgbLamp.id }} Details</h2>
-    <div><span>id: </span>{{rgbLamp.id}}</div>
+<div *ngIf="lamp">
+    <h2>Lamp: {{lamp.id }} Details</h2>
+    <div><span>id: </span>{{lamp.id}}</div>
     <div>
       <label>kleur:
-        <input [ngModel]="rgbLamp.rgb" />
-        <input  type="color" [(ngModel)]="rgbLamp.rgb" [(ngModel)]="rgbLamp.xy" />
+        <input  type="color" [(ngModel)]="lamp.kleurRGB"  />
+      </label>
+    </div>
+    <div>
+      <label class="switch">
+        <input type="checkbox"
+        [(ngModel)]="lamp.on"
+        ng-true-value="true"
+        ng-false-value="false"
+        >
+        <span class="slider round"></span>
       </label>
     </div>
 </div>

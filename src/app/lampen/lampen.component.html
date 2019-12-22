@@ -5,10 +5,10 @@
     <span >Kleur: {{lamp.xy}} Sterkte: {{lamp.sterkte}} </span>
   </li>
 </ul>
-  <app-lamp-detail [rgbLamp]="geselecteerdeLamp"></app-lamp-detail>
+  <app-lamp-detail [lamp]="geselecteerdeLamp"></app-lamp-detail>
 
  <button class="button" (click)="update()">
-  Save
+  Verstuur naar Bridge
 </button>
 
 <!-- div *ngIf="geselecteerdeLamp">

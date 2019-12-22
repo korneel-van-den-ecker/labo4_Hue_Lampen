@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Lamp, RGBLamp } from '../lamp';
+import { Lamp } from '../lamp';
 import { LampService } from '../lamp.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { LampService } from '../lamp.service';
 })
 
 export class LampDetailComponent implements OnInit {
-  @Input() rgbLamp: RGBLamp;
+  @Input() lamp: Lamp;
 
   constructor(
     private lampenService: LampService
@@ -18,7 +18,7 @@ export class LampDetailComponent implements OnInit {
   ngOnInit() {
   }
   getLamp(): void {
-    this.lampenService.getLamp(this.rgbLamp.id);
+    this.lampenService.getLamp(this.lamp.id);
   }
 
 }

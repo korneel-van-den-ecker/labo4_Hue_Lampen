@@ -12,13 +12,14 @@ export class LampService {
   // School bridge
   // private hueUrl = `http://10.194.112.8/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
   // Hue bridge sim
-   private hueUrl = `http://localhost:3000/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
+  // private hueUrl = `http://localhost:3000/api/POupQekuVaV8NOOhEPxxM1uZEtSlYbDQytO-C72-/lights`;
   // Naert Bridge
-  //private hueUrl = `http://178.118.245.113/api/d8cHvqBsSW9iVf6lLMlisoJj96RfV7VybBRwmD42/lights`;
+   private hueUrl = `http://178.118.245.113/api/d8cHvqBsSW9iVf6lLMlisoJj96RfV7VybBRwmD42/lights`;
 
   httpOptions = {
+    // Dit als je instellingen op server kan veranderen ; via proxy dan
     // headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'})
-    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
   };
   constructor(
     private http: HttpClient ) { }
@@ -36,7 +37,17 @@ export class LampService {
   }
 
   putLamp(lamp: Lamp) {
-    return this.http.put(`${this.hueUrl}/${lamp.id}/state`, lamp, this.httpOptions);
+    // Checken of we de lamp wel wensen aan te zetten , anders gewoon uitzetten
+    console.log({on: lamp.on, bri: lamp.sterkte, xy: lamp.xy});
+    if (lamp.on === false) {
+      return this.http.put(`${this.hueUrl}/${lamp.id}/state`, {on: lamp.on}, this.httpOptions).subscribe(
+        (res) => console.log(res)
+      );
+    } else {
+      return this.http.put(`${this.hueUrl}/${lamp.id}/state`, {on: lamp.on, bri: lamp.sterkte, xy: lamp.xy}, this.httpOptions).subscribe(
+        (res) => console.log(res)
+      );
+    }
   }
 
   /* private handleError<T>(operation = 'operation' , result?: T) {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Lamp, KleurMethoden} from '../lamp';
+import { Lamp} from '../lamp';
 import { LampService } from '../lamp.service';
 // import { LAMPEN } from '../mock-lampen';
 
@@ -26,7 +26,11 @@ export class LampenComponent implements OnInit {
   construeerLampen(data: object) {
     console.log(data);
     for (let i = 1; i <=  Object.keys(data).length; i++) {
-       const lampje: Lamp = {id : i, on : data[i].state.on, xy : data[i].state.xy, sterkte : data[i].state.bri, kleurRGB : '#ffffff'};
+       const lampje: Lamp = {id : i,
+        on : data[i].state.on,
+        xy : data[i].state.xy,
+        sterkte : data[i].state.bri,
+        kleurRGB : '#ffffff'};
        this.lampen.push(lampje);
     }
   }

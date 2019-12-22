@@ -50,18 +50,4 @@ export class LampService {
     }
   }
 
-  /* private handleError<T>(operation = 'operation' , result?: T) {
-    return(error: any): Observable<T> => {
-      console.error(error);
-      // this.log(`${operation} failed= ${error.message}`);
-      return of(result as T);
-    }
-  }
-
-  updateLamp(lamp: Lamp): Observable<any> {
-    return this.http.put(`${this.hueUrl}/${lamp.id}/state/`, lamp, this.httpOptions).pipe(
-      tap(_ => console.log(`updated hero id=${lamp.id}`)),
-      catchError(this.handleError<any>('updateLamp'))
-    );
-  } */
 }

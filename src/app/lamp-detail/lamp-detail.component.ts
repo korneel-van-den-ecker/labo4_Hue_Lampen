@@ -17,8 +17,7 @@ export class LampDetailComponent implements OnInit {
 
   ngOnInit() {
   }
-  getLamp(): void {
+  /* getLamp(): void {
     this.lampenService.getLamp(this.lamp.id);
-  }
-
+  } */
 }

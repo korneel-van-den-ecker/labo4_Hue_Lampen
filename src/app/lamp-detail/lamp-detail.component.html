@@ -3,17 +3,17 @@
     <div><span>id: </span>{{lamp.id}}</div>
     <div *ngIf="lamp.on == true">
       <div>
-        <label>x: {{lamp.xy[0]}}
-          <input type="range" min="0" max="1" step="0.0000001" [(ngModel)]="lamp.xy[0]" />
+        <label class="lbl">x: {{lamp.xy[0]}}
+          <input type="range" min="0" max="1" step="0.0001" [(ngModel)]="lamp.xy[0]" />
         </label>
       </div>
       <div>
-        <label>y: {{lamp.xy[1]}}
-          <input type="range" min="0" max="1" step="0.0000001" [(ngModel)]="lamp.xy[1]" />
+        <label class="lbl">y: {{lamp.xy[1]}}
+          <input type="range" min="0" max="1" step="0.0001" [(ngModel)]="lamp.xy[1]" />
         </label>
       </div>
       <div>
-        <label>sterkte: {{lamp.sterkte}}
+        <label class="lbl">sterkte: {{lamp.sterkte}}
           <input type="range" min="0" max="255" step="1" [(ngModel)]="lamp.sterkte" />
         </label>
       </div>
